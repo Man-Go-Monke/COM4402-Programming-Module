@@ -1,0 +1,5 @@
+itemName = input("What is the name of the item. ")
+price = float(input("What was the price? "))
+quantity = int(input("How much did you buy "))
+print("You bought "+ str(quantity) + " x " + itemName + " at " + str(price) + " each. Total = £" + str(price * quantity))
+print(f"You bought {quantity} x {itemName} for {price} each. The total cost comes out to £{price * quantity}")
