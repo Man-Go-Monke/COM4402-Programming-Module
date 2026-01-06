@@ -4,6 +4,6 @@ Length = len(Word)
 
 
 for i in range (Length -1, -1, -1):
-    reverse +=Word[i]
+    reverse += Word[i]
 
 print(reverse)
