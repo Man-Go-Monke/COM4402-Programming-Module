@@ -9,7 +9,7 @@ def Withdraw(amount):
 
 balance = 0
 while True:
-    print(f"\n1. Deposit\n"
+    print(f"1. Deposit\n"
           f"2. Withdraw\n"
           f"3. Show balance\n"
           f"0. Exit")
