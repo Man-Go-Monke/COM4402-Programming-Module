@@ -1,13 +1,14 @@
-def Deposit(amount):
+balance = 0
+def Deposit(amount, balance):
     balance += amount
     return balance
 
-def Withdraw(amount):
+def Withdraw(amount, balance):
     balance -= amount
     return balance
 
 
-balance = 0
+
 while True:
     print(f"1. Deposit\n"
           f"2. Withdraw\n"
@@ -17,15 +18,18 @@ while True:
     match choice:
         case 1:
             amount = int(input("Enter the amount of money you want to deposit\n"))
-            Deposit(amount)
+            balance = Deposit(amount, balance)
             print(f"You deposited {amount}\n"
                   f"Your new balance is {balance}")
             input()
         case 2:
             amount = int(input("Enter the amount of money you want to withdraw\n"))
-            Withdraw(amount)
-            print(f"You withdrew {amount}\n"
-                  f"Your new balance is {balance}")
+            if amount > balance:
+                print("Insufficient money")
+            else:
+                balance = Withdraw(amount, balance)
+                print(f"You withdrew {amount}\n"
+                      f"Your new balance is {balance}")
             input()
         case 3:
             print(f"Your current balance is {balance}")
